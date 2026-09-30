@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="nl-NL">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- TWEB-32979 link-preview test page, variant 2 (tuned for iPhone Messages, Apple TN3156).
+         Differences from index.html: V800 image instead of F160, apple-touch-icon + favicon,
+         og:title without "| beslist.nl" (Messages shows the domain already), large twitter card.
+         SEO tags are copied from the live PLP unchanged. -->
+    <title>Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB kopen? Vergelijk de beste prijs op beslist.nl</title>
+    <meta name="description" content="Vergelijk Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB aanbiedingen tegen de laagste prijs bij 7 winkels. Bekijk nu de beste Mobiele telefoons aanbiedingen!">
+    <!-- Test copy of a real product page: keep it out of search indexes (scrapers ignore this). -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB">
+    <meta property="og:description" content="Vergelijk, kies, koop.">
+    <meta property="og:image" content="https://hwimages.beslist.net/beslist-images/pim/8806097826798/394/V800/36971dd6c2b4bc5796d8fa46f7ca79bc/Mobiele-telefoons/Samsung-Galaxy-S26-Ultra-Smartphone-Blauw-256-GB.webp">
+    <meta property="og:image:width" content="769">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:alt" content="Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB">
+    <meta property="og:site_name" content="beslist.nl">
+    <meta property="og:locale" content="nl_NL">
+    <!-- og:url is deliberately absent. On beslist.nl it is the canonical URL. On this test host,
+         pointing it at beslist.nl would make Facebook/LinkedIn re-scrape the LIVE page and show
+         the old preview. Scrapers fall back to the URL that was shared. -->
+
+    <!-- Twitter / X: same values; the 769×800 image qualifies for the large card. -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB">
+    <meta name="twitter:description" content="Vergelijk, kies, koop.">
+    <meta name="twitter:image" content="https://hwimages.beslist.net/beslist-images/pim/8806097826798/394/V800/36971dd6c2b4bc5796d8fa46f7ca79bc/Mobiele-telefoons/Samsung-Galaxy-S26-Ultra-Smartphone-Blauw-256-GB.webp">
+    <meta name="twitter:image:alt" content="Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB">
+
+    <!-- Icons: Messages uses the apple-touch-icon (square, >= 108px) next to the title. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.beslist.net/website-shell-public/client/assets/images/favicon/nl/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.beslist.net/website-shell-public/client/assets/images/favicon/nl/favicon-96x96.png">
+    <link rel="shortcut icon" href="https://cdn.beslist.net/website-shell-public/client/assets/images/favicon/nl/favicon.ico">
+
+    <style>
+        :root {
+            --blue: #56a9d4;
+            --orange: #f37632;
+            --orange-dark: #e0621d;
+            --text: #1d1d1b;
+            --text-light: #6b6b6b;
+            --divider: #c8c8c8;
+            --border: #e2e2e2;
+            --bg-field: #f7f7f7;
+            --star: #ffb400;
+            --focus: #1d6fa5;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background: #fff;
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            align-items: center;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            font-size: 24px;
+            font-weight: 700;
+            height: 56px;
+            padding: 0 16px;
+        }
+
+        .header span { color: #e7318a; }
+
+        .page {
+            margin: 0 auto;
+            max-width: 1180px;
+            padding: 16px;
+        }
+
+        .notice {
+            background: #fff8e1;
+            border: 1px solid #ffe08a;
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            padding: 8px 12px;
+        }
+
+        .product {
+            display: grid;
+            gap: 16px;
+            grid-template-areas: "summary" "image";
+        }
+
+        @media (min-width: 768px) {
+            .product {
+                gap: 32px;
+                grid-template-areas: "image summary";
+                grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+            }
+        }
+
+        .summary { grid-area: summary; }
+
+        .summary__top {
+            align-items: flex-start;
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.25;
+            margin: 0 0 8px;
+        }
+
+        @media (min-width: 768px) {
+            h1 { font-size: 28px; }
+        }
+
+        /* reviews | Prijsalarm | Delen (mobile) — reviews | Delen (desktop) */
+        .links {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 12px;
+            gap: 8px;
+        }
+
+        .links__stars { color: var(--star); letter-spacing: 1px; }
+
+        .links__divider {
+            background: var(--divider);
+            height: 14px;
+            width: 1px;
+        }
+
+        .text-button {
+            align-items: center;
+            background: none;
+            border: 0;
+            border-radius: 4px;
+            color: var(--text);
+            cursor: pointer;
+            display: inline-flex;
+            font: inherit;
+            gap: 4px;
+            padding: 0;
+        }
+
+        .text-button:hover { text-decoration: underline; }
+
+        .text-button:focus-visible,
+        .button:focus-visible,
+        .icon-button:focus-visible,
+        .field:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 2px;
+        }
+
+        .text-button svg { height: 14px; width: 14px; }
+
+        /* Doubled class for specificity: must beat `.button`'s display, declared further down. */
+        .mobile-only.mobile-only { display: inline-flex; }
+        .desktop-only.desktop-only { display: none; }
+
+        @media (min-width: 768px) {
+            .mobile-only.mobile-only { display: none; }
+            .desktop-only.desktop-only { display: inline-flex; }
+        }
+
+        .button {
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            gap: 8px;
+            justify-content: center;
+            padding: 10px 16px;
+            white-space: nowrap;
+        }
+
+        .button--neutral {
+            background: #fff;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .button--primary {
+            background: var(--orange);
+            border: 0;
+            color: #fff;
+            width: 100%;
+        }
+
+        .button--primary:hover { background: var(--orange-dark); }
+
+        .button svg { height: 16px; width: 16px; }
+
+        .image {
+            align-items: center;
+            aspect-ratio: 1;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            grid-area: image;
+            justify-content: center;
+            position: relative;
+        }
+
+        .image img {
+            height: auto;
+            max-width: 70%;
+        }
+
+        .icon-button {
+            align-items: center;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 40px;
+        }
+
+        .offer {
+            align-items: center;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding: 16px;
+        }
+
+        .offer__price { font-size: 20px; font-weight: 700; }
+        .offer__meta { color: var(--text-light); font-size: 14px; }
+
+        .offer__link {
+            background: var(--orange);
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 16px;
+            text-decoration: none;
+        }
+
+        /* Share modal: bottom sheet on mobile, centred from 768px. */
+        .modal {
+            border: 0;
+            border-radius: 16px 16px 0 0;
+            margin: auto 0 0;
+            max-height: 90vh;
+            max-width: 100%;
+            padding: 16px;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .modal {
+                border-radius: 16px;
+                margin: auto;
+                max-width: 480px;
+                padding: 24px;
+            }
+        }
+
+        .modal::backdrop { background: rgb(0 0 0 / 45%); }
+
+        .modal__header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .modal__title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .modal__close {
+            background: none;
+            border: 0;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .modal__close svg { height: 20px; width: 20px; }
+
+        .modal__body {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            gap: 16px;
+        }
+
+        .modal__intro {
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .field {
+            background: var(--bg-field);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font: inherit;
+            padding: 10px 12px;
+            width: 100%;
+        }
+
+        .visually-hidden {
+            clip: rect(0 0 0 0);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">beslist<span>.nl</span></header>
+
+    <main class="page">
+        <p class="notice">
+            Testpagina voor TWEB-32979, variant 2 (voor iPhone): grote afbeelding, app-icoon en titel zonder "| beslist.nl". Het echte product staat op
+            <a href="https://www.beslist.nl/p/samsung-galaxy-s26-ultra-smartphone-blauw-256-gb/655/8806097826798/">beslist.nl</a>.
+        </p>
+
+        <div class="product">
+            <section class="summary">
+                <div class="summary__top">
+                    <h1>Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB</h1>
+                    <button type="button" class="button button--neutral desktop-only">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                        Prijsalarm instellen
+                    </button>
+                </div>
+
+                <div class="links">
+                    <span><span class="links__stars" aria-hidden="true">★★★★☆</span> 4,2/5 (12 reviews)</span>
+                    <span class="links__divider" aria-hidden="true"></span>
+                    <span class="mobile-only" style="gap: 8px; align-items: center;">
+                        <button type="button" class="text-button">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                            Prijsalarm
+                        </button>
+                        <span class="links__divider" aria-hidden="true"></span>
+                    </span>
+                    <button type="button" class="text-button" id="share-trigger" data-testid="share__trigger" aria-haspopup="dialog">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 8.5 7M12 3.5 15.5 7M12 3.5V15"/><path d="M7 10.5H6a1.5 1.5 0 0 0-1.5 1.5v7A1.5 1.5 0 0 0 6 20.5h12a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 18 10.5h-1"/></svg>
+                        Delen
+                    </button>
+                </div>
+
+                <div class="offer">
+                    <div>
+                        <div class="offer__price">€ 950,-</div>
+                        <div class="offer__meta">Laagste prijs bij 7 winkels</div>
+                    </div>
+                    <a class="offer__link" href="https://www.beslist.nl/p/samsung-galaxy-s26-ultra-smartphone-blauw-256-gb/655/8806097826798/">Bekijk</a>
+                </div>
+            </section>
+
+            <div class="image">
+                <img
+                    src="https://hwimages.beslist.net/beslist-images/pim/8806097826798/394/V800/36971dd6c2b4bc5796d8fa46f7ca79bc/Mobiele-telefoons/Samsung-Galaxy-S26-Ultra-Smartphone-Blauw-256-GB.webp"
+                    alt="Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB"
+                    width="769"
+                    height="800"
+                >
+                <!-- Only the heart on the image; the price-alarm bell is gone. -->
+                <button type="button" class="icon-button" aria-label="Toevoegen aan verlanglijst">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <dialog class="modal" id="share-modal" data-testid="share__modal" aria-labelledby="share-modal-title">
+        <div class="modal__header">
+            <h2 class="modal__title" id="share-modal-title">Deel dit product met anderen</h2>
+            <button type="button" class="modal__close" id="share-close" aria-label="Sluiten">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+        </div>
+        <div class="modal__body">
+            <p class="modal__intro">
+                Kopieer de link en plak hem in een chat, mail of bericht. Vergelijk, kies en deel je
+                favoriete producten met anderen.
+            </p>
+            <label class="visually-hidden" for="share-link">Link naar dit product</label>
+            <input class="field" id="share-link" data-testid="share__link-input" type="text" readonly>
+            <button type="button" class="button button--primary" id="share-copy" data-testid="share__copy-button" autofocus>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+                <span id="share-copy-label">Kopieer link</span>
+            </button>
+            <p class="visually-hidden" role="status" id="share-status"></p>
+        </div>
+    </dialog>
+
+    <script>
+        (function () {
+            var TITLE = 'Samsung - Galaxy S26 Ultra - Smartphone - Blauw - 256 GB';
+            var SHARE_TEXT = 'Kijk wat ik op beslist.nl vond: ' + TITLE + ' 👇';
+            // On this test host, share the page itself so the shared link shows THIS page's preview.
+            // Hash and query are stripped, like the canonical URL on beslist.nl.
+            var shareUrl = location.origin + location.pathname;
+
+            var trigger = document.getElementById('share-trigger');
+            var modal = document.getElementById('share-modal');
+            var input = document.getElementById('share-link');
+            var copyButton = document.getElementById('share-copy');
+            var copyLabel = document.getElementById('share-copy-label');
+            var status = document.getElementById('share-status');
+            var resetTimer;
+
+            input.value = shareUrl;
+
+            function isMobile() {
+                return window.matchMedia('(max-width: 767px)').matches;
+            }
+
+            function openModal() {
+                copyLabel.textContent = 'Kopieer link';
+                status.textContent = '';
+                modal.showModal();
+            }
+
+            trigger.addEventListener('click', function () {
+                // Native OS share sheet on mobile only (needs https). Desktop always gets the copy panel.
+                if (isMobile() && typeof navigator.share === 'function') {
+                    navigator.share({ title: TITLE, text: SHARE_TEXT, url: shareUrl }).catch(function (error) {
+                        if (error && error.name !== 'AbortError') openModal();
+                    });
+                    return;
+                }
+                openModal();
+            });
+
+            function showCopied() {
+                copyLabel.textContent = 'Gekopieerd!';
+                status.textContent = 'Link gekopieerd';
+                clearTimeout(resetTimer);
+                resetTimer = setTimeout(function () {
+                    copyLabel.textContent = 'Kopieer link';
+                }, 2000);
+            }
+
+            function legacyCopy() {
+                input.focus();
+                input.select();
+                try {
+                    return document.execCommand('copy');
+                } catch (e) {
+                    return false;
+                }
+            }
+
+            copyButton.addEventListener('click', function () {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(shareUrl).then(showCopied, function () {
+                        if (legacyCopy()) showCopied();
+                    });
+                } else if (legacyCopy()) {
+                    showCopied();
+                }
+            });
+
+            input.addEventListener('focus', function () {
+                input.select();
+            });
+
+            document.getElementById('share-close').addEventListener('click', function () {
+                modal.close();
+            });
+
+            // Backdrop click closes; Escape is native to <dialog>. Focus returns to the trigger.
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) modal.close();
+            });
+            modal.addEventListener('close', function () {
+                trigger.focus();
+            });
+        })();
+    </script>
+</body>
+</html>
